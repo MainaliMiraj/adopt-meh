@@ -1,10 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import fetchPet from "./src/fetchPet";
+import fetchPet from "../data-fetch/fetchPet";
 
 const Details = () => {
   const { id } = useParams();
   const results = useQuery(["details", id], fetchPet);
+  
+  if(results.isError){
+    return <h2>something went wrong!</h2>
+  }
 
   if (results.isLoading) {
     return (
