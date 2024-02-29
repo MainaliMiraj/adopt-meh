@@ -20,7 +20,7 @@ const SearchParams = () => {
   const pets = results?.data?.pets ?? [];
 
   return (
-    <div className="search-params">
+    <div className="my-0 mx-auto w-11/12">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -32,6 +32,7 @@ const SearchParams = () => {
           };
           setRequestParams(obj);
         }}
+        className="p-10 mb-10 rounded-lg bg-gray-200 shadow-lg flex flex-col items-center justify-center"
       >
         {adoptedPet ? (
           <div className="pet image-container">
