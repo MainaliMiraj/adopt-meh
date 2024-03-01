@@ -7,8 +7,8 @@ const Pet = ({ name, animal, breed, images, location, id }) => {
   }
 
   return (
-    <Link to={`/details/${id}`} className="pet">
-      <div className="image-container">
+    <Link to={`/details/${id}`} className="pet transition hover:scale-105">
+      <div className="image-container ">
         <img src={hero} alt="name" />
       </div>
       <div className="info">
